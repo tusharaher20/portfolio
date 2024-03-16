@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
+import axios from "axios";
 
 export const Newsletter = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState("");
-
-  useEffect(() => {
-    if (status === "success") clearFields();
-  }, [status]);
-
+  //
+  //   useEffect(() => {
+  //     if (status === "success") clearFields();
+  //   }, [status]);
+  //
   const handleSubmit = (e) => {
     e.preventDefault();
     email &&
@@ -16,35 +17,51 @@ export const Newsletter = ({ status, message, onValidated }) => {
         EMAIL: email,
       });
   };
+  //
+  //   const clearFields = () => {
+  //     setEmail("");
+  //   };
 
-  const clearFields = () => {
-    setEmail("");
+  const [advice, setAdvice] = useState("");
+
+  useEffect(() => {
+    fetchAdvice();
+  }, []);
+
+  const fetchAdvice = () => {
+    axios
+      .get("https://api.adviceslip.com/advice")
+      .then((response) => {
+        const { advice } = response.data.slip;
+        setAdvice(advice);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
     <Col lg={12}>
       <div className="newsletter-bx wow slideInUp">
         <Row>
-          <Col lg={12} md={6} xl={5}>
-            <h3>
-              Subscribe to our Newsletter<br></br> & Never miss latest updates
-            </h3>
+          {/* <Col lg={12} md={6} xl={5}>
+            <h3 className="adviceTxt">Get an Advice </h3>
             {status === "sending" && <Alert>Sending...</Alert>}
             {status === "error" && <Alert variant="danger">{message}</Alert>}
             {status === "success" && <Alert variant="success">{message}</Alert>}
-          </Col>
-          <Col md={6} xl={7}>
-            <form onSubmit={handleSubmit}>
-              <div className="new-email-bx">
-                <input
-                  value={email}
-                  type="email"
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email Address"
-                />
-                <button type="submit">Submit</button>
-              </div>
-            </form>
+          </Col> */}
+          <Col md={12} xl={12}>
+            <div className="new-email-bx">
+              <button
+                className="newsletter-button"
+                onClick={fetchAdvice}
+                type="submit"
+              >
+                Get an Advice
+              </button>
+
+              <h5 className="newsletter-advice">{advice}</h5>
+            </div>
           </Col>
         </Row>
       </div>
