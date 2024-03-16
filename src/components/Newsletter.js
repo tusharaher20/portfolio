@@ -44,22 +44,16 @@ export const Newsletter = ({ status, message, onValidated }) => {
     <Col lg={12}>
       <div className="newsletter-bx wow slideInUp">
         <Row>
-          {/* <Col lg={12} md={6} xl={5}>
-            <h3 className="adviceTxt">Get an Advice </h3>
-            {status === "sending" && <Alert>Sending...</Alert>}
-            {status === "error" && <Alert variant="danger">{message}</Alert>}
-            {status === "success" && <Alert variant="success">{message}</Alert>}
-          </Col> */}
-          <Col md={12} xl={12}>
+          <Col sm={12} md={12} xl={12}>
             <div className="new-email-bx">
               <button
-                className="newsletter-button"
+                sm={12}
+                className="newsletter-button mobile-newsletter-button"
                 onClick={fetchAdvice}
                 type="submit"
               >
-                Get an Advice
+                Get Advice
               </button>
-
               <h5 className="newsletter-advice">{advice}</h5>
             </div>
           </Col>

@@ -686,3 +686,24 @@ button.newsletter-button:active {
   background-color: #ffffff;
   box-shadow: 0 -2px 0 0 rgb(255, 255, 255);
 }
+@media (max-width: 767px) {
+  .new-email-bx {
+    margin-top: 10px !important; /* Adjust margin for mobile */
+  }
+
+  .mobile-newsletter-button {
+    font-size: 12px !important; /* Adjust font size for mobile */
+    padding: 0.5em 1.5em !important; /* Adjust padding for mobile */
+  }
+
+  .newsletter-advice {
+    font-size: 16px !important; /* Adjust font size for mobile */
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .newsletter-bx {
+    padding: 21px 16px 27px 21px;
+    border-radius: 31px;
+    margin-top: -66px !important;
+  }
+}
