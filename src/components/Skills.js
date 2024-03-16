@@ -63,11 +63,11 @@ export const Skills = () => {
                   <h5>HTML</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter2} alt="Image" />
                   <h5>CSS5</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter3} alt="Image" />
                   <h5>Javascript</h5>
                 </div>
                 <div className="item">
@@ -75,11 +75,11 @@ export const Skills = () => {
                   <h5>Asp.net</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter2} alt="Image" />
                   <h5>.NetCore</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter3} alt="Image" />
                   <h5>Git</h5>
                 </div>
                 <div className="item">
@@ -87,11 +87,11 @@ export const Skills = () => {
                   <h5>Figma</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter2} alt="Image" />
                   <h5>Autocad</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter3} alt="Image" />
                   <h5>Solidworks</h5>
                 </div>
                 <div className="item">
