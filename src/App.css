@@ -249,6 +249,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Banner Css ************/
+@media screen and (min-width: 1024px) {
+  .banner{
+    padding: 116px 0px 100px  0px !important;
+  };
+}
+
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
